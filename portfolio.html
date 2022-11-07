@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#myimage').hover(function () {
+                $('#intro').fadeOut('slow'), $('#aboutme').fadeIn('slow');
+            },
+                function () {
+                    $('#aboutme').fadeOut('slow'), $('#intro').fadeIn('slow');
+                })
+        })
+        $(function () {
+            $('#myimage').click(function () {
+                $('#pop').show();
+            })
+        })
+        $(function () {
+            $('#myimage').dblclick(function () {
+                window.location.href = "https://www.facebook.com/lythe.oretos";
+            })
+        })
+        $(function () {
+            var img = $("#myimage");
+            $('#btn').click(function () {
+                if (img.width() == 300) {
+                    img.animate({ width: "400px", height: "400px" }, 1000);
+                }
+                else {
+                    img.animate({ width: img.attr("width"), height: img.attr("height") }, 1000);
+                }
+            })
+        })
+        $(function () {
+            var img = $("#myimage");
+            $('#btnn').click(function () {
+                if (img.width() == 400) {
+                    img.animate({ width: "300px", height: "300px" }, 1000);
+                }
+                else {
+                    img.animate({ width: img.attr("width"), height: img.attr("height") }, 1000);
+                }
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+
+    <div class="intro"><br>
+        <div class="page"><br>
+
+            <h1>Any Friend of COFFEE if a FRIEND of Mine!</h1>
+            <button id="btn">Resize Profile</button>
+            <button id="btnn">Back To Original</button>
+            <a href="index.html"><button>Resume</button></a>
+            <div class="bars">
+                <h2>Hi, I'm Allan Divino</h2><br>
+                <img src="img/me (2).jpg" alt="" id="myimage">
+                <h5 id="pop">-Ethyl Sotero- <br>He is indeed called by some of mhy my batchmates father of PN
+                    2023.(testimonial).</h5>
+                <p id="intro">"They Call Me The Father Of PN 2023"</p>
+                <p id="aboutme">I am at my 16 years of existence and counting. <br> I am currently in Talamban Cebu,
+                    though I am <br> from Sta. Maria Tagbina, Surigao Del Sur. <br>I Love Coffee and Coffee Alone</p>
+            </div>
+            <div class="hobbies">
+                <div class="swim">
+                    <img src="img/lupad.jpg" alt="" class="image">
+                    <div class="overlay">SWIMMING</div>
+                </div>
+                <div class="swim">
+                    <img src="img/bike.jpg" alt="" class="image">
+                    <div class="overlay">BIKING</div>
+                </div>
+                <div class="swim">
+                    <img src="img/images.jpg" alt="" class="image">
+                    <div class="overlay">SLEEPING</div>
+                </div>
+            </div>
+            <h3> These Are My Hobbies</h3>
+
+
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
